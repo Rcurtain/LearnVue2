@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 绑定 HTML Class -->
+
+        <!-- 对象语法 -->
+        <div v-bind:class="{ active: isActive, 'text-danger': hasError }">This is class Bind!</div>
+        <div v-bind:class="classObject"></div>
+
+        <!-- 数组语法 -->
+        <div v-bind:class="[activeClass, errorClass]"></div>
+
+        <!-- 绑定内联样式 -->
+        <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">This is css bind!</div>
+        <div v-bind:style="styleObject">This is css bind Object!</div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="../Vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

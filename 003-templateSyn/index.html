@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="app">
+        <span>Message: {{msg}}</span><br/>
+        <span v-once>这个将不会改变: {{msg}}</span>
+        <!-- 原始 HTML -->
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+        <!-- 使用 JavaScript 表达式 -->
+        <p>{{ number + 1 }}</p>
+        <p>{{ ok? 'YES':'NO' }}</p>
+        <p>{{ message.split('').reverse().join('') }}</p>
+        <!-- 指令 -->
+        <p v-if="seen">You can see me!</p>
+        <!-- 参数 -->
+        <a v-bind:href="url">...</a>
+        <a v-on="doSomething">...</a>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="../Vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
